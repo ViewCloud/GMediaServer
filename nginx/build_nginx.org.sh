@@ -39,7 +39,7 @@ make clean
 --with-openssl=$openssl \
 --with-cc-opt='-static -static-libgcc -O3 -fPIC -fdata-sections -ffunction-sections' \
 --with-ld-opt='-static -fPIC -Wl,--gc-sections -Wl,--strip-all' \
---prefix=/etc/nginx \
+--prefix=/server/nginx \
 `#--sbin-path=/usr/sbin/nginx                               `\
 `#--conf-path=/etc/nginx/nginx.conf                         `\
 `#--error-log-path=/var/log/nginx/error.log                 `\
