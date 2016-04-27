@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-nginx=nginx-1.9.15
+nginx=nginx-1.10.0
 pcre=pcre-8.38
 zlib=zlib-1.2.8
 openssl=openssl-1.0.2g
@@ -22,4 +22,5 @@ tar xzvf $openssl.tar.gz
 mv $openssl openssl
 
 git clone git://github.com/arut/nginx-rtmp-module.git
-
+git clone git://github.com/arut/nginx-mtask-module.git
+git clone git://github.com/arut/nginx-mysql-module.git

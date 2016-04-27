@@ -4,6 +4,8 @@
 # http://nginx.org/en/linux_packages.html#arguments 
 
 nginx_rtmp_module=$(pwd)/nginx-rtmp-module
+nginx_mtask_module=$(pwd)/nginx-mtask-module
+nginx_mysql_module=$(pwd)/nginx-mysql-module
 pcre=$(pwd)/pcre
 zlib=$(pwd)/zlib
 openssl=$(pwd)/openssl
@@ -34,11 +36,13 @@ cd nginx
 make clean
 ./configure \
 --add-module=$nginx_rtmp_module \
+--add-module=$nginx_mtask_module \
+--add-module=$nginx_mysql_module \
 --with-pcre=$pcre \
 --with-zlib=$zlib \
 --with-openssl=$openssl \
 --with-cc-opt='-static -static-libgcc -O3 -fPIC -fdata-sections -ffunction-sections' \
---with-ld-opt='-static -fPIC -Wl,--gc-sections -Wl,--strip-all' \
+--with-ld-opt='-fPIC -Wl,--gc-sections -Wl,--strip-all' \
 --prefix=/server/nginx \
 `#--sbin-path=/usr/sbin/nginx                               `\
 `#--conf-path=/etc/nginx/nginx.conf                         `\
