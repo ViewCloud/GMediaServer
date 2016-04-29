@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="live.cgi" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/live" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="live.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="live.cgi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="live.h" />
+		<Unit filename="live_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="live_api.h" />
+		<Unit filename="live_conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="live_conf.h" />
+		<Unit filename="live_db.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="live_db.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
